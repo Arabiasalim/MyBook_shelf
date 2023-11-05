@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOOK LIST</title>
+</head>
+<body>
+
+<h1>Image list</h1>
+<ul>
+    {% for image in images %}
+        <li>
+        <h2>{{ image.tittle }}</h2>
+        <img src="{{ image.image.url }}" alt="{{ image.tittle }}">
+        </li>
+
+    {% endfor  %}
+</ul>
+<a href="{% url 'Books_upload' %}">Upload books</a>
+</body>
+</html>
